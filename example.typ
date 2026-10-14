@@ -15,9 +15,9 @@
   ],
 )
 
-// Global typography and paragraph rules
+// Global typography and paragraph rules (with Devanagari / Nepali font fallback)
 #set text(
-  font: ("Times New Roman", "Arial"),
+  font: ("Times New Roman", "Nirmala UI", "Mangal"),
   size: 11pt,
   fill: white,
   lang: "en",
@@ -84,7 +84,7 @@
     radius: (right: 3pt),
     align(left)[
       #text(weight: "bold", fill: white)[Abstract] --- 
-      This document serves as a clean, idiomatic example of a document authored in *Typst*. It demonstrates page setup, typography, mathematical formulas, formatted tables, code listings, callout admonitions, and cross-referencing in a dark mode (black and white) aesthetic.
+      This document serves as a clean, idiomatic example of a document authored in *Typst*. It demonstrates page setup, typography, mathematical formulas, formatted tables, code listings, multilingual support (including Nepali), callout admonitions, and cross-referencing in a dark mode aesthetic.
     ],
   )
 ]
@@ -206,6 +206,23 @@ Typst allows you to write functions that encapsulate reusable UI components:
   Run `typst watch example.typ` in your terminal to enable automatic live preview in your favorite PDF reader.
 ]
 
-= 6. Conclusion
+= 6. नेपाली भाषा समर्थन (Nepali Language Support)
 
-With its lightweight syntax, instant compilation, and modern programmatic flexibility, Typst is an excellent choice for research papers, homework assignments, resumes, and technical documentation.
+टाइपस्ट (Typst) ले युनिकोड (Unicode) र देवनागरी लिपिलाई पूर्ण रूपमा समर्थन गर्दछ। सही फन्ट (जस्तै _Nirmala UI_ वा _Mangal_) को प्रयोग गर्दा नेपाली पाठहरू स्पष्ट र सुन्दर रूपमा प्रस्तुत हुन्छन्।
+
+#block(
+  width: 100%,
+  stroke: (left: 3.5pt + white, rest: 0.5pt + luma(70)),
+  fill: luma(25),
+  inset: (x: 12pt, y: 10pt),
+  radius: 3pt,
+  [
+    #text(weight: "bold", fill: white)[नेपाली सारांश:] \
+    #v(0.2em)
+    टाइपस्ट एक आधुनिक, तीव्र र शक्तिशाली कागजात ढाँचा (typesetting) प्रणाली हो। यसले अनुसन्धान पत्र, प्रतिवेदन तथा प्राविधिक लेखहरू तयार गर्न निकै सहज वातावरण प्रदान गर्दछ।
+  ],
+)
+
+= 7. Conclusion
+
+With its lightweight syntax, instant compilation, rich multilingual capabilities, and modern programmatic flexibility, Typst is an excellent choice for research papers, homework assignments, resumes, and technical documentation.
